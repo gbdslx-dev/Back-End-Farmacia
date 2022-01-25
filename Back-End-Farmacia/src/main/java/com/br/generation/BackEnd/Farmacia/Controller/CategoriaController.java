@@ -25,9 +25,15 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository repository;
 
-	@GetMapping("/{id}")
+	@GetMapping
 	public ResponseEntity<List<Categoria>> findAllCategoria() {
 		return ResponseEntity.ok(repository.findAll());
+	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<Categoria> findByIdCategoria(@PathVariable long id) {
+		return repository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
+				.orElse(ResponseEntity.notFound().build());
 	}
 
 	@GetMapping("/fabricante/{fabricante}")
