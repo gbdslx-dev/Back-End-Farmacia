@@ -9,4 +9,6 @@ import com.br.generation.BackEnd.Farmacia.Model.Produto;
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 
 	public Produto findByNomeContainingIgnoreCase(String nome);
+
+	public Object save(com.br.generation.BackEnd.Farmacia.Controller.ProdutoController.Produto produto);
 }

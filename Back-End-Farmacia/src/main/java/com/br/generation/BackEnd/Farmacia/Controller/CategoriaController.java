@@ -24,7 +24,6 @@ import com.br.generation.BackEnd.Farmacia.Repository.CategoriaRepository;
 public class CategoriaController {
 	@Autowired
 	private CategoriaRepository repository;
-
 	@GetMapping
 	public ResponseEntity<List<Categoria>> findAllCategoria() {
 		return ResponseEntity.ok(repository.findAll());
