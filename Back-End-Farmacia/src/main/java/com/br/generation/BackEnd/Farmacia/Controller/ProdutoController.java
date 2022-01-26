@@ -23,9 +23,6 @@ import com.br.generation.BackEnd.Farmacia.Repository.ProdutoRepository;
 @CrossOrigin ("*")
 
 public class ProdutoController {
-	public class Produto {
-
-	}
 
 	@Autowired
 	private ProdutoRepository repository;
